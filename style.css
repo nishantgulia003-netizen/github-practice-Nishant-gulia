@@ -66,3 +66,51 @@ main {
 
 .step-level-1 { margin-left: 20px; }
 .step-level-2 { margin-left: 40px; }
+/* Search Container */
+.search-container {
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.6rem 2.5rem 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+}
+
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* Recipe Counter */
+.recipe-info {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Favorite Button */
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;   /* 🔥 THIS IS THE FIX */
+}
+.recipe-card {
+    position: relative;
+}

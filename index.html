@@ -11,10 +11,30 @@
   <header>
     <h1>🍳 RecipeJS</h1>
     <p>Your Functional Cooking Companion</p>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search recipes or ingredients..."
+        autocomplete="off"
+      />
+      <button id="clear-search" class="clear-btn" style="display: none;">
+        ✕
+      </button>
+    </div>
   </header>
 
   <main>
     <div id="recipe-container"></div>
+
+    <div class="recipe-info">
+      <p id="recipe-count">Showing 8 of 8 recipes</p>
+    </div>
+
+    <button class="filter-btn" data-filter="favorites">
+      ❤️ Favorites Only
+    </button>
   </main>
 
   <script src="app.js"></script>
