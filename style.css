@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+#recipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.recipe-card {
+  background: white;
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.recipe-meta {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.difficulty.easy { background: #d4edda; color: #155724; padding: 0.2rem 0.6rem; border-radius: 12px; }
+.difficulty.medium { background: #fff3cd; color: #856404; padding: 0.2rem 0.6rem; border-radius: 12px; }
+.difficulty.hard { background: #f8d7da; color: #721c24; padding: 0.2rem 0.6rem; border-radius: 12px; }
+
+.toggle-btn {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+.ingredients-container,
+.steps-container {
+  display: none;
+  margin-top: 1rem;
+}
+
+.ingredients-container.visible,
+.steps-container.visible {
+  display: block;
+}
+
+.step-level-1 { margin-left: 20px; }
+.step-level-2 { margin-left: 40px; }
+/* Search Container */
+.search-container {
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.6rem 2.5rem 0.6rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+}
+
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* Recipe Counter */
+.recipe-info {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+/* Favorite Button */
+.favorite-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;   /* 🔥 THIS IS THE FIX */
+}
+.recipe-card {
+    position: relative;
+}
